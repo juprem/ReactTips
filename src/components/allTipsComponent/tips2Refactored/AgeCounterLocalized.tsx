@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { DescriptionWrapper } from '@/components/descriptionWrapper/DescriptionWrapper';
 import { Button } from '@/components/ui/button';
+import {CheesyAgeSayingComponent} from "@/components/cheesyAgeSayingComponent/CheesyAgeSayingComponent";
 
 export function AgeCounterLocalized() {
     const [age, setAge] = useState(25);
@@ -8,7 +8,7 @@ export function AgeCounterLocalized() {
     return (
         <div className="flex items-center gap-1 w-full justify-between">
             <div className="whitespace-nowrap">Age : {age}</div>
-            <DescriptionWrapper />
+            <CheesyAgeSayingComponent />
             <Button onClick={() => setAge(age + 1)}>+ 1 an</Button>
         </div>
     );
