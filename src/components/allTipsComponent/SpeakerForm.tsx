@@ -1,8 +1,11 @@
-import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
 import { ColoredComponent } from '@/components/coloredComponent/ColoredComponent';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Header } from '@/components/allTipsComponent/tips1Refactored/Header';
+import { FirstNameInput } from '@/components/allTipsComponent/tips1Refactored/FirstNameInput';
+import { LastNameInput } from '@/components/allTipsComponent/tips1Refactored/LastNameInput';
+import { FullName } from '@/components/allTipsComponent/tips1Refactored/FullName';
+import { AgeCounter } from '@/components/allTipsComponent/tips1Refactored/AgeCounter';
+import { Comment } from '@/components/allTipsComponent/tips1Refactored/Comment';
 
 export function SpeakerForm() {
     const [firstName, setFirstName] = useState('');
@@ -18,28 +21,13 @@ export function SpeakerForm() {
 
     return (
         <div className="flex flex-col border-neutral-600 rounded bg-neutral-700 border w-96">
-            <div className="h-10 flex font-bold justify-center items-center border-b border-neutral-600 w-full">
-                Ajouter un speaker
-            </div>
+            <Header />
             <div className="p-6 flex flex-col gap-2">
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Prénom :</div>
-                    <Input className="w-64" onChange={(e) => setFirstName(e.target.value)} />
-                </div>
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Nom :</div>
-                    <Input className="w-64" onChange={(e) => setLastName(e.target.value)} />
-                </div>
-                <div className="overflow-ellipsis overflow-hidden text-nowrap">Nom complet : {fullName}</div>
-                <div className="flex flex-col gap-1">
-                    <div>Commentaire :</div>
-                    <Textarea onChange={(e) => setComment(e.target.value)} value={comment} />
-                </div>
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Age : {age}</div>
-                    <ColoredComponent />
-                    <Button onClick={() => setAge(age + 1)}>+ 1 an</Button>
-                </div>
+                <FirstNameInput setFirstName={setFirstName} />
+                <LastNameInput setLastName={setLastName} />
+                <FullName fullName={fullName} />
+                <Comment setComment={setComment} comment={comment} />
+                <AgeCounter age={age} setAge={setAge} />
                 <ColoredComponent />
             </div>
         </div>
