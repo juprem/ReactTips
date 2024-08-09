@@ -1,9 +1,10 @@
-import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
+import { Header } from '@/components/allTipsComponent/tips1Refactored/Header';
+import { TextField } from '@/components/allTipsComponent/tips1Refactored/TextField';
+import { AgeComponent } from '@/components/allTipsComponent/tips1Refactored/AgeComponent';
+import { TextAreaInput } from '@/components/allTipsComponent/tips1Refactored/TextAreaInput';
+import { TextInput } from '@/components/allTipsComponent/tips1Refactored/TextInput';
 import { DescriptionWrapper } from '@/components/descriptionWrapper/DescriptionWrapper';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { CheesyAgeSayingComponent } from '@/components/cheesyAgeSayingComponent/CheesyAgeSayingComponent';
 
 export function SpeakerDescription() {
     const [firstName, setFirstName] = useState('');
@@ -19,28 +20,13 @@ export function SpeakerDescription() {
 
     return (
         <DescriptionWrapper>
-            <div className="h-10 flex font-bold justify-center items-center border-b border-neutral-600 w-full">
-                Ajouter un speaker
-            </div>
+            <Header />
             <div className="p-6 flex flex-col gap-2">
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Prénom :</div>
-                    <Input className="w-64" onChange={(e) => setFirstName(e.target.value)} />
-                </div>
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Nom :</div>
-                    <Input className="w-64" onChange={(e) => setLastName(e.target.value)} />
-                </div>
-                <div className="overflow-ellipsis overflow-hidden text-nowrap">Nom complet : {fullName}</div>
-                <div className="flex flex-col gap-1">
-                    <div>Commentaire :</div>
-                    <Textarea onChange={(e) => setComment(e.target.value)} value={comment} />
-                </div>
-                <div className="flex items-center gap-1 w-full justify-between">
-                    <div className="whitespace-nowrap">Age : {age}</div>
-                    <CheesyAgeSayingComponent />
-                    <Button onClick={() => setAge(age + 1)}>+ 1 an</Button>
-                </div>
+                <TextInput setValue={setFirstName} label="Prénom :" />
+                <TextInput setValue={setLastName} label="Nom :" />
+                <TextField value={`Nom complet : ${fullName}`} />
+                <TextAreaInput setValue={setComment} value={comment} />
+                <AgeComponent age={age} setAge={setAge} />
             </div>
         </DescriptionWrapper>
     );
