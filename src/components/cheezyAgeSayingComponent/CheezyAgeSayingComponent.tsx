@@ -9,7 +9,7 @@ const proverbes = [
     "L'homme arrive novice à chaque âge de sa vie.",
 ];
 
-export function CheesyAgeSayingComponent() {
+export function CheezyAgeSayingComponent() {
     const random = Math.floor(Math.random() * proverbes.length);
 
     return <div className="italic text-center text-xs">{proverbes[random]}</div>;

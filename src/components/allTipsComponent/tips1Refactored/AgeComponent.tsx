@@ -1,17 +1,17 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from '@/components/ui/button';
-import {CheesyAgeSayingComponent} from "@/components/cheesyAgeSayingComponent/CheesyAgeSayingComponent";
+import {CheezyAgeSayingComponent} from "@/components/cheezyAgeSayingComponent/CheezyAgeSayingComponent";
 
 interface AgeCounterProps {
     age: number;
     setAge: Dispatch<SetStateAction<number>>;
 }
 
-export function AgeCounter({ age, setAge }: AgeCounterProps) {
+export function AgeComponent({ age, setAge }: AgeCounterProps) {
     return (
         <div className="flex items-center gap-1 w-full justify-between">
             <div className="whitespace-nowrap">Age : {age}</div>
-            <CheesyAgeSayingComponent />
+            <CheezyAgeSayingComponent />
             <Button onClick={() => setAge(age + 1)}>+ 1 an</Button>
         </div>
     );

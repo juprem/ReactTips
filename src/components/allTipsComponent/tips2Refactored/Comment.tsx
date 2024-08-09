@@ -5,7 +5,7 @@ interface CommentLocalizedStateProps {
     fullName: string;
 }
 
-export function CommentLocalizedState({ fullName }: CommentLocalizedStateProps) {
+export function Comment({ fullName }: CommentLocalizedStateProps) {
     const [comment, setComment] = useState('');
 
     useEffect(() => {
