@@ -1,4 +1,4 @@
-import { fetchService } from '@/components/dataFetching/fetchService.ts';
+import { fetchService } from '@/components/dataFetching/fetchService';
 
 export function todoService() {
     const { getQuery } = fetchService();

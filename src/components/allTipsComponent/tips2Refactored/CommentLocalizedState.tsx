@@ -8,9 +8,7 @@ interface CommentLocalizedStateProps {
 export function CommentLocalizedState({ fullName }: CommentLocalizedStateProps) {
     const [comment, setComment] = useState('');
 
-    useEffect(() => {
-        setComment('');
-    }, [fullName]);
+    useEffect(() => setComment(''), [fullName]);
 
     return (
         <div className="flex flex-col gap-1">
