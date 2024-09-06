@@ -2,9 +2,11 @@
 
 Bonjour, je me présente Olivier ABDELNOUR et je vous remercie d'avoir suivi ma conférence.
 
+Vous pouvez voir mon linkedin ici : [Linkedin](www.linkedin.com/in/olivier-abdelnour)
+
 Vous avez dans ce repository tout le code que j'ai utilisé comme support.
 
-Je vous donne comme promis des ressources supplémentaires sur pour renforcer et améliorer votre expérience dans le développement d'une application React.
+Je vous donne comme promis des ressources supplémentaires pour renforcer et améliorer votre expérience dans le développement d'une application React.
 
 ## Les librairies
 
