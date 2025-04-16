@@ -3,6 +3,10 @@
 Bonjour, je me présente Olivier ABDELNOUR et je vous remercie d'avoir suivi ma conférence.
 
 Vous pouvez voir mon linkedin ici : [Linkedin](www.linkedin.com/in/olivier-abdelnour)
+---
+layout: Linkedin
+target: www.linkedin.com/in/olivier-abdelnour
+---
 
 Vous avez dans ce repository tout le code que j'ai utilisé comme support.
 
